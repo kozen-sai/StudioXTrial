@@ -1,0 +1,35 @@
+{
+  "name": "HelloWorld",
+  "description": "空のタスクオートメーション",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.7.0-alpha.412719]",
+    "UiPath.Mail.Activities": "[1.6.0-alpha.414524]",
+    "UiPath.System.Activities": "[19.8.0-alpha.414140]",
+    "UiPath.UIAutomationX.Activities": "[1.0.0-alpha.414185]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.7.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Business",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
+  },
+  "expressionLanguage": "VisualBasic"
+}

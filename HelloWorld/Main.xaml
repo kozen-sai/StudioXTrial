@@ -1,0 +1,70 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="492.666666666667,617.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerPointCustomActivities;assembly=PowerPointCustomActivities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uua="clr-namespace:UiPath.UiAutomationX.Activities;assembly=UiPath.UIAutomationX.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="452.666666666667,497.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Excel_Workspace.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Excel" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:ExportPPTToPDF OutputFilePath="{x:Null}" PPTFilePath="{x:Null}" DisplayName="Export PPT to PDF" sap:VirtualizedContainerService.HintSize="414.666666666667,22" sap2010:WorkflowViewState.IdRef="ExportPPTToPDF_1" />
+    <p:DeleteSlide FilePath="{x:Null}" SlideIndex="{x:Null}" DisplayName="Delete slide" sap:VirtualizedContainerService.HintSize="414.666666666667,22" sap2010:WorkflowViewState.IdRef="DeleteSlide_1" />
+    <uua:GetText ContinueOnError="{x:Null}" DelayAfter="300" DelayBefore="200" DisplayName="Get Text '192220424'" sap:VirtualizedContainerService.HintSize="414.666666666667,182.666666666667" sap2010:WorkflowViewState.IdRef="GetText_1">
+      <uua:GetText.Target>
+        <uua:TargetAnchorable Anchor="{x:Null}" ClippingRegion="{x:Null}" Accuracy="0.8" AnchorPosition="Auto" CursorOffset="27, 5" DesignTimeRectangle="937, 252, 105, 24" FullSelector="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI'/&gt;&lt;ctrl automationid='accountnrlabel'/&gt;&lt;ctrl name='192220424' role='text'/&gt;" ImageBase64="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" InformativeScreenshot="1cecb5a05876d4e554dce2e43c730622.png" Occurence="1" SelectionType="Node" Selector="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI'/&gt;&lt;ctrl automationid='accountnrlabel'/&gt;&lt;ctrl name='192220424' role='text'/&gt;" Text="192220424" Timeout="30000" UseAnchor="False" />
+      </uua:GetText.Target>
+      <uua:GetText.Text>
+        <OutArgument x:TypeArguments="ui:GenericValue">[Saved.Values(Of GenericValue)("Text from Get Text '192220424'")]</OutArgument>
+      </uua:GetText.Text>
+    </uua:GetText>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="メッセージボックス" sap:VirtualizedContainerService.HintSize="414.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[string.Format(&quot;Account #: {0}&quot;, Saved.Values(Of GenericValue)(&quot;Text from Get Text '192220424'&quot;))]" TopMost="True" />
+  </Sequence>
+</Activity>
